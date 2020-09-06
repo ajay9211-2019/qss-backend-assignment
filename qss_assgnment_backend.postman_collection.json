@@ -691,7 +691,7 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "User Controller.login",
+			"name": "user login",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -748,51 +748,6 @@
 					],
 					"cookie": [],
 					"body": "{\n \"token\": \"ullamco elit pariatur\"\n}"
-				}
-			]
-		},
-		{
-			"name": "Ping Controller.ping",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{baseUrl}}/ping",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"ping"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "Ping Response",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}/ping",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"ping"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n \"greeting\": \"dolor id dolore aliquip ad\",\n \"date\": \"in occaecat\",\n \"url\": \"adipisicing et ut dolore non\",\n \"headers\": {\n  \"Content-Type\": \"consectetur nulla laboris\"\n }\n}"
 				}
 			]
 		}
