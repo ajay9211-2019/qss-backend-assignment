@@ -1,0 +1,812 @@
+{
+	"info": {
+		"_postman_id": "ebacb45c-d04a-4c4a-9948-d5aae0e2156b",
+		"name": "qss_assgnment_backend",
+		"description": "qss assignment \n\nContact Support:\n Email: tiwari.ajay@mahindra.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "contacts",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Contact Controller.replace By Id",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fullname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"mobile\": \"<string>\",\n    \"id\": \"<number>\",\n    \"address\": \"<string>\",\n    \"created_at\": \"<string>\",\n    \"is_notify\": \"<number>\"\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/contacts/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contacts",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "5753e1a2-2f97-4dcd-bcaa-f8832ab7c949",
+											"key": "id",
+											"value": "<number>",
+											"type": "string",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Contact PUT success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"fullname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"mobile\": \"<string>\",\n    \"id\": \"<number>\",\n    \"address\": \"<string>\",\n    \"created_at\": \"<string>\",\n    \"is_notify\": \"<number>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/contacts/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Contact Controller.update By Id",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"<number>\",\n    \"fullname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"mobile\": \"<string>\",\n    \"address\": \"<string>\",\n    \"created_at\": \"<dateTime>\",\n    \"is_notify\": \"<number>\"\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/contacts/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contacts",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "758c22fe-c8ac-430a-9d12-f87d704825fa",
+											"key": "id",
+											"value": "<number>",
+											"type": "string",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Contact PATCH success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": \"<number>\",\n    \"fullname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"mobile\": \"<string>\",\n    \"address\": \"<string>\",\n    \"created_at\": \"<dateTime>\",\n    \"is_notify\": \"<number>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/contacts/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Contact Controller.find By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/contacts/:id?filter=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contacts",
+										":id"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": ""
+										}
+									],
+									"variable": [
+										{
+											"id": "d7d4bb21-3179-4e53-9dca-a0c7bdd527c0",
+											"key": "id",
+											"value": "<number>",
+											"type": "string",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Contact model instance",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/contacts/:id?filter=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												":id"
+											],
+											"query": [
+												{
+													"key": "filter",
+													"value": ""
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"fullname\": \"nulla dolor velit magna\",\n \"email\": \"dolore sit\",\n \"mobile\": \"ut ea ad ex\",\n \"id\": 79473299.63120344,\n \"address\": \"id ea amet ad\",\n \"created_at\": \"magna sit sint quis nostrud\",\n \"is_notify\": 71471949.2316595\n}"
+								}
+							]
+						},
+						{
+							"name": "Contact Controller.delete By Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/contacts/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contacts",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "f709197f-ba45-4852-90b5-00f647980ebc",
+											"key": "id",
+											"value": "<number>",
+											"type": "string",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Contact DELETE success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/contacts/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Contact Controller.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJlbWFpbCI6InFzc0FqYXlAZ21haWwuY29tIiwiaWF0IjoxNTk5Mzk4MTkzLCJleHAiOjE1OTk0MTk3OTN9.W7-hJyClpmx-_lLtQ_kD0rk9mGyeUF46Z5pEnR7CLtw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullname\": \"Ajay tiwari\",\n    \"email\": \"ajay@gmail.com\",\n    \"mobile\": \"9867195170\",\n    \"address\": \"sultanpur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/contacts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"contacts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Contact model instance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fullname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"mobile\": \"<string>\",\n    \"address\": \"<string>\",\n    \"created_at\": \"<dateTime>\",\n    \"is_notify\": \"<number>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/contacts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contacts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"fullname\": \"exercitation deserunt \",\n \"email\": \"anim est cillum in consequat\",\n \"mobile\": \"velit ut\",\n \"id\": -5954376.743652284,\n \"address\": \"Excepteur irure sed\",\n \"created_at\": \"sit mollit adipisicing ullamco\",\n \"is_notify\": -24864789.85926777\n}"
+						}
+					]
+				},
+				{
+					"name": "Contact Controller.update All",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"<number>\",\n    \"fullname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"mobile\": \"<string>\",\n    \"address\": \"<string>\",\n    \"created_at\": \"<dateTime>\",\n    \"is_notify\": \"<number>\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/contacts?where=",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Contact PATCH success count",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"<number>\",\n    \"fullname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"mobile\": \"<string>\",\n    \"address\": \"<string>\",\n    \"created_at\": \"<dateTime>\",\n    \"is_notify\": \"<number>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/contacts?where=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contacts"
+									],
+									"query": [
+										{
+											"key": "where",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"count\": -40361001.35160976\n}"
+						}
+					]
+				},
+				{
+					"name": "Contact Controller.find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/contacts?filter=",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Array of Contact model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/contacts?filter=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contacts"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"fullname\": \"do sit ex\",\n  \"email\": \"laborum Duis labore pariatur\",\n  \"mobile\": \"et ut\",\n  \"id\": -14120653.10154,\n  \"address\": \"consectetur eiusmod cillum eu Excepteur\",\n  \"created_at\": \"incididunt aliqua commodo\",\n  \"is_notify\": -95685150.60505863\n },\n {\n  \"fullname\": \"non\",\n  \"email\": \"consequat aliqua\",\n  \"mobile\": \"Lorem minim pariatur adipisicing\",\n  \"id\": 60583576.25358868,\n  \"address\": \"proident Excepteur\",\n  \"created_at\": \"consequat minim\",\n  \"is_notify\": 36258237.00106111\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "Contact Controller.count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/contacts/count?where=",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"contacts",
+								"count"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Contact model count",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/contacts/count?where=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contacts",
+										"count"
+									],
+									"query": [
+										{
+											"key": "where",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"count\": -40361001.35160976\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "User Controller.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"qss\",\n    \"email\": \"qssAjay@gmail.com\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User model instance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"password\": \"<string>\",\n    \"email\": \"<string>\",\n    \"created_at\": \"<dateTime>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"password\": \"sit et\",\n \"email\": \"nulla\",\n \"id\": -93945377.38489856,\n \"created_at\": \"non tempor\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User Controller.find",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJlbWFpbCI6InFzc0FqYXlAZ21haWwuY29tIiwiaWF0IjoxNTk5Mzk4MTkzLCJleHAiOjE1OTk0MTk3OTN9.W7-hJyClpmx-_lLtQ_kD0rk9mGyeUF46Z5pEnR7CLtw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users?filter=",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Array of User model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users?filter=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"password\": \"labore voluptate ut laboris veniam\",\n  \"email\": \"nostrud ex amet velit\",\n  \"id\": 6799046.1650120765,\n  \"created_at\": \"commodo veniam elit consectetur aliqua\"\n },\n {\n  \"password\": \"enim dolore ullamco\",\n  \"email\": \"in voluptate\",\n  \"id\": 85054473.17524418,\n  \"created_at\": \"nisi voluptate\"\n }\n]"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User Controller.login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"qss\",\n    \"email\": \"qssAjay@gmail.com\"\n    \n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"<string>\",\n    \"email\": \"<string>\",\n    \"created_at\": \"<dateTime>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"token\": \"ullamco elit pariatur\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Ping Controller.ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/ping",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Ping Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ping",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ping"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"greeting\": \"dolor id dolore aliquip ad\",\n \"date\": \"in occaecat\",\n \"url\": \"adipisicing et ut dolore non\",\n \"headers\": {\n  \"Content-Type\": \"consectetur nulla laboris\"\n }\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
